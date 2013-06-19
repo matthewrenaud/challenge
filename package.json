@@ -1,0 +1,22 @@
+{
+  "name": "challenge",
+  "version": "0.0.1",
+  "author": "Matthew Renaud <matt@renaud.us>",
+  "description": "coding challenge",
+  "scripts": {
+    "start": "node app.js",
+    "test": "./node_modules/.bin/mocha",
+    "predeploy": "echo This will be run before deploying the app",
+    "postdeploy": "echo This will be run after deploying the app"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "commander":"*"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "engines": {
+    "node": ">=10.12"
+  }
+}
