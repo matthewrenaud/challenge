@@ -1,14 +1,14 @@
 
 var VError = require('./error');
 
-module.exports = function Router (controllers) {
+module.exports = function App (controllers, db) {
   var controllerMap = this.controllerMap = {};
   controllers.forEach(function(controller){
       controllerMap[controller] = require('../controllers/'+controller);
   });
 }
 
-Router.prototype.process = function (commandString , cb ) {
+App.prototype.route = function (commandString , cb ) {
   var spaceIndex = commandString.indexOf(' ');
   if (spaceIndex < 1) {
     return cb(new VError('invalid input'));

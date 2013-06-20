@@ -1,19 +1,22 @@
 
 
-var keyValueStore = {};
 
-function set(key,value,cb){
-  keyValueStore[key] = value;
-  cb(null, true);
-}
-function get(key,cb){
-  cb(null, keyValueStore[key]);
-}
+var Datastore = require('nedb')
 
-module.exports = {
-  set: set,
-  get: get
+module.exports = function Db (config){
+  Object.keys(config).forEach(function(collection){
+    this[collection] = new Database({filename:process.cwd()+'/'+config[collection]});
+    this[collection].loadDatabase();
+  });
+} ;
+
+Db.prototype.add = function (collection, doc, cb){
+  this[collection].insert(doc, cb);
 };
+Db.prototype.get = function (collection, query, cb){
+  this[collection].find(query, cb);
+};
+
 
 
 

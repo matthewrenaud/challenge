@@ -4,14 +4,15 @@
   "author": "Matthew Renaud <matt@renaud.us>",
   "description": "coding challenge",
   "scripts": {
-    "start": "node app.js",
+    "start": "node node-challenge.js",
     "test": "./node_modules/.bin/mocha",
     "predeploy": "echo This will be run before deploying the app",
     "postdeploy": "echo This will be run after deploying the app"
   },
-  "main": "app.js",
+  "main": "node-challenge.js",
   "dependencies": {
-    "commander":"*"
+    "commander":"*",
+    "nedb":"*"
   },
   "devDependencies": {
     "mocha": "*"
