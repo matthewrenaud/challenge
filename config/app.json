@@ -1,0 +1,3 @@
+{
+    "controllers": ["add","feed","pay","user"]
+}

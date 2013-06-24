@@ -12,7 +12,8 @@
   "main": "node-challenge.js",
   "dependencies": {
     "commander":"*",
-    "nedb":"*"
+    "nedb":"*",
+    "tingodb":"*"
   },
   "devDependencies": {
     "mocha": "*"

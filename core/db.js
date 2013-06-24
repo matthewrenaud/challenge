@@ -1,20 +1,19 @@
 
 
+var TingoDb = require('tingodb')().Db;
 
-var Datastore = require('nedb')
+var Db = module.exports = function (config){
 
-module.exports = function Db (config){
-  Object.keys(config).forEach(function(collection){
-    this[collection] = new Database({filename:process.cwd()+'/'+config[collection]});
-    this[collection].loadDatabase();
-  });
+  var file = process.cwd()+'/data';
+  this.conn = new TingoDb(file, {});
+
 } ;
 
 Db.prototype.add = function (collection, doc, cb){
-  this[collection].insert(doc, cb);
+  this.conn.insert(doc, cb);
 };
 Db.prototype.get = function (collection, query, cb){
-  this[collection].find(query, cb);
+  this.conn.find(query, cb);
 };
 
 

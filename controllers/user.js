@@ -1,7 +1,6 @@
 
-module.exports = function (commandString) {
+module.exports = function (context, commandString, cb) {
 
-
-
+  cb(null, null);
 
 }
