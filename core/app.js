@@ -10,7 +10,8 @@ var App = module.exports = function (config, db) {
   var controllers = config.controllers || [];
   var controllerMap = this.controllerMap = {};
   controllers.forEach(function(controller){
-    controllerMap[controller] = require('../controllers/'+controller);
+    var path = '../controllers/'+controller;
+    controllerMap[controller] = require(path);
   });
 }
 
@@ -24,7 +25,7 @@ App.prototype.route = function (commandString , cb ) {
   if (!controller) {
     return cb(new Error('invalid command: '+ command));
   }
-  controller(new Context(this), commandString.substring(spaceIndex), cb );
+  controller(new Context(this), commandString.substring(spaceIndex + 1), cb );
 }
 
 App.prototype.start = function (){
