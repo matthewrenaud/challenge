@@ -13,7 +13,8 @@
   "dependencies": {
     "commander":"*",
     "nedb":"*",
-    "tingodb":"*"
+    "tingodb":"*",
+    "couchbase":"*"
   },
   "devDependencies": {
     "mocha": "*"
