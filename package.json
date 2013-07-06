@@ -11,10 +11,7 @@
   },
   "main": "node-challenge.js",
   "dependencies": {
-    "commander":"*",
-    "nedb":"*",
-    "tingodb":"*",
-    "couchbase":"*"
+    "pg":"*"
   },
   "devDependencies": {
     "mocha": "*"

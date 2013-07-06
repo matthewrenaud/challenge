@@ -1,23 +1,15 @@
-var cb = require('couchbase');
+//var pg = require('pg');
+//var connectionString = "pg://matt:password@localhost/matt"
+//pg.connect(connectionString, function(err, client, done) {
+//  client.query('SELECT * FROM mattschema1.user WHERE id = $1', [1], function(err, result) {
+//    console.log(result);
+//    done();
+//  });
+//});
 
-var config = {
-  hosts : [ "localhost:8091" ],
-  bucket : "default"
-};
 
 
-cb.connect(config, function(err, cb1) {
-  if (err) {
-    console.log("Failed to connect to the cluster")
-    process.exit(1)
-  } else {
-    console.log('11112')
-    cb1.set('testkey2', 1, function (err, meta) {
-      console.log('11113')
-      cb1.get('testkey2', function (err, doc, meta) {
+//extract vshard
+//console.log(('154617313239041' & 0x0000007fffff) >>>10);
 
-        process.exit(1)
-      })
-    });
-  }
-});
+console.log((631151982).toString(2).length);

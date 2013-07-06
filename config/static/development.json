@@ -1,7 +1,6 @@
 {
   "db": {
-    "url":"",
-    "lshards": 1,
-    "phshards":1
+    "urls":["matt:password@localhost/matt"],
+    "vShards": 1
   }
 }
