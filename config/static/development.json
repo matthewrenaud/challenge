@@ -1,0 +1,7 @@
+{
+  "db": {
+    "url":"",
+    "lshards": 1,
+    "phshards":1
+  }
+}
