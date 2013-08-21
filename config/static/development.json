@@ -1,6 +1,0 @@
-{
-  "db": {
-    "urls":["matt:password@localhost/matt"],
-    "vShards": 1
-  }
-}

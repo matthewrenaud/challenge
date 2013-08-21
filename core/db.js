@@ -1,11 +1,8 @@
 
 
-var TingoDb = require('tingodb')().Db;
 
-var Db = module.exports = function (config){
+var Db = module.exports = function (params){
 
-  var file = process.cwd()+'/data';
-  this.conn = new TingoDb(file, {});
 
 } ;
 
